@@ -4,6 +4,7 @@
  * @author Matt Bostock
  */
 public class FunctionalArrayList extends ArrayList implements FunctionalList {
+  @Override
   public ReturnObject head() {
     if (this.list[0] == null) {
       return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -12,6 +13,7 @@ public class FunctionalArrayList extends ArrayList implements FunctionalList {
     return new ReturnObjectImpl(this.list[0]);
   }
 
+  @Override
   public FunctionalList rest() {
     FunctionalArrayList tmpList = new FunctionalArrayList();
 

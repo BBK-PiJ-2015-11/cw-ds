@@ -4,6 +4,7 @@
  * @author Matt Bostock
  */
 public class FunctionalLinkedList extends LinkedList implements FunctionalList {
+  @Override
   public ReturnObject head() {
     if (this.first == null) {
       return new ReturnObjectImpl(ErrorMessage.EMPTY_STRUCTURE);
@@ -12,6 +13,7 @@ public class FunctionalLinkedList extends LinkedList implements FunctionalList {
     return new ReturnObjectImpl(this.first.getValue());
   }
 
+  @Override
   public FunctionalList rest() {
     FunctionalLinkedList tmpList = new FunctionalLinkedList();
 
