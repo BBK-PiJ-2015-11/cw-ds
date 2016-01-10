@@ -1,4 +1,4 @@
-public class TestSampleableList {
+public class TestSampleableListImpl {
   public static void main(String[] args) {
     SampleableList l = new SampleableListImpl();
 
