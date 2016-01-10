@@ -15,7 +15,7 @@ public class ReturnObjectImpl implements ReturnObject {
 
   @Override
   public boolean hasError() {
-    return this.errMsg != ErrorMessage.NO_ERROR;
+    return this.errMsg != ErrorMessage.NO_ERROR && this.errMsg != null;
   }
 
   @Override
