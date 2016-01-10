@@ -5,8 +5,8 @@
  */
 public class ArrayList implements List {
   private final static int DEFAULT_LENGTH = 20;
-  private Object[] list = new Object[DEFAULT_LENGTH];
-  private int size = 0;
+  protected Object[] list = new Object[DEFAULT_LENGTH];
+  protected int size = 0;
 
   @Override
   public boolean isEmpty() {
