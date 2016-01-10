@@ -8,14 +8,17 @@ public class ArrayList implements List {
   private Object[] list = new Object[DEFAULT_LENGTH];
   private int size = 0;
 
+  @Override
   public boolean isEmpty() {
     return this.size == 0;
   }
 
+  @Override
   public int size() {
     return this.size;
   }
 
+  @Override
   public ReturnObject get(int index) {
     if (indexIsOutOfBounds(index)) {
       return new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
@@ -24,6 +27,7 @@ public class ArrayList implements List {
     return new ReturnObjectImpl(this.list[index]);
   }
 
+  @Override
   public ReturnObject remove(int index) {
     if (indexIsOutOfBounds(index)) {
       return new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
@@ -45,6 +49,7 @@ public class ArrayList implements List {
     return new ReturnObjectImpl(item);
   }
 
+  @Override
   public ReturnObject add(int index, Object item) {
     if (indexIsOutOfBounds(index)) {
       return new ReturnObjectImpl(ErrorMessage.INDEX_OUT_OF_BOUNDS);
@@ -71,6 +76,7 @@ public class ArrayList implements List {
     return new ReturnObjectImpl(null);
   }
 
+  @Override
   public ReturnObject add(Object item) {
     ensureArrayLength();
 
