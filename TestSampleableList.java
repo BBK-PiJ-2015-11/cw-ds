@@ -4,6 +4,8 @@ public class TestSampleableList {
 
     TestHelpers.assertEquals(l.size(), 0);
     TestHelpers.assertEquals(l.isEmpty(), true);
+    SampleableList tmp = l.sample();
+    TestHelpers.assertEquals(tmp.size(), 0);
 
     l.add("foo");
     TestHelpers.assertEquals(l.isEmpty(), false);
