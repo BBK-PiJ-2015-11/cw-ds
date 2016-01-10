@@ -40,5 +40,13 @@ public class TestFunctionalArrayList {
     TestHelpers.assertNull(ret.getReturnValue());
     TestHelpers.assertEquals(ret.getError(), ErrorMessage.INDEX_OUT_OF_BOUNDS);
     TestHelpers.assertEquals(ret.hasError(), true);
+
+    // Ensure original list not affected by modifying new list
+    // returned by rest()
+    FunctionalList f = l.rest();
+    TestHelpers.assertEquals(l.size(), 2);
+    f.remove(1);
+    TestHelpers.assertEquals(l.size(), 2);
+    TestHelpers.assertEquals(f.size(), 1);
   }
 }
