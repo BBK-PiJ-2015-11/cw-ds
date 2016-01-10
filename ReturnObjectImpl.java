@@ -1,6 +1,4 @@
 /**
- * @inheritDoc
- *
  * @author Matt Bostock
  */
 public class ReturnObjectImpl implements ReturnObject {
