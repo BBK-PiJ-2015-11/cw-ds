@@ -4,8 +4,8 @@
  * @author Matt Bostock
  */
 public class LinkedList implements List {
-  private LinkedListElement first;
-  private int size = 0;
+  protected LinkedListElement first;
+  protected int size = 0;
 
   @Override
   public boolean isEmpty() {
